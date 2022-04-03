@@ -1,0 +1,19 @@
+@media screen and (max-width:600px){
+
+    #menu{
+        position:relative;
+    }
+    
+    .logo{
+        display: none;
+    }
+    .Bordes_Redondeados{
+        transform:scale(0.8,0.8);
+        position: relative;
+        transform: translate(100px);
+    }
+    .mobile_tamaño{
+        text-align: center;
+    }
+}
+
