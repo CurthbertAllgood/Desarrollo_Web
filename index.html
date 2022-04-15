@@ -29,11 +29,10 @@
             <img class="Bordes_Redondeados" src="./assets/images/Herreria_inicio.jpg" alt="Pantalla_inicio"/>
         </div>
     </div>
-    <div>
-        <section id="grilla">
-            <div class="columna1">
+        <section class="row">
+            <div class="columna1 col">
             <ul>
-                <h2>Herreria</h2>
+                <h2 class="display-6">Herreria</h2>
                 <li>Escaleras</li>
                 <li>Puertas</li>
                 <li>Portones</li>
@@ -41,16 +40,18 @@
                 <li>Barandas</li>
             </ul>
         </div>
-            <div class="texto">
-                <h2>Bienvenido a Herreria Kamacar</h2>
-                <p>por favor comente sus experiencias con nosotros</p>
+            <div class="texto col">
+
+                <h2 class="display-6">Bienvenido a la Herreria</h2>
+                <p >por favor comente sus experiencias con nosotros</p>
                 <p><textarea name="comentario" rows="5" cols="50">Escribe aquí tu comentario: </textarea></p>
                 <input type="submit" value="Enviar">
                 <input type="reset" name="Borrar">
             </div>
-            <div class="columna2">
+        </div>
+            <div class="columna2 col">
             <ul>
-                <h2>Automatizacion</h2>
+                <h2 class="display-6">Automatizacion</h2>
                 <li>Porton Corredizo</li>
                 <li>Porton de pivot</li>
                 <li>Porton Plegable</li>
@@ -62,4 +63,6 @@
         <footer>
             <p>Todos los Trabajos presentados son de nuestra autoria.</p>
         </footer>
+        <script src="./libs/bootstrap/js/bootstrap.min.js"> </script>
 </body>
+</html>
