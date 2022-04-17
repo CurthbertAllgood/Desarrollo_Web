@@ -5,57 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/72a0e590b2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
     <title>Document</title>
 </head>
 <body>
+    
     <div>
-    <ul id="menu">
-        <li class="flex_box"><a class="color"href="../index.html">Home</a></li>
-        <li class="flex_box"><a class="color"href="./empresa.html">Empresa</a></li>
-        <li class="flex_box"><a class="color"href="./proyectos.html">Proyectos</a></li>
-        <li class="flex_box"><a class="color"href="./cotizacion.html">Cotizacion</a></li>
-        <li class="flex_box"><a class="color"href="./contacto.html">Contacto</a></li>
-    </ul>
-    </div>
-    <h1>Eliga el producto que mejor funcione para su hogar</h1>
-    <div>
-        <form action="../Desarrollo_Web/formulario.txt" method="post">
-        <div id="cotizacion_grilla">
-        <section>
-            <div >  
-                <img class="formato_lista"src="../assets/images/Image 9.png" alt="Corredizo">
-                <div class="formato_boton"> <label for="Porton Corredizo">Porton Corredizo</label>
-                    <input type="checkbox" value="Corredizo">
+        <div id="menu">
+            <nav class="nav nav-pills flex-column flex-sm-row">
+                    <a class="flex-sm-fill text-sm-center nav-link" aria-current="page" href="../index.html">Home</a>
+                    <a class="flex-sm-fill text-sm-center nav-link " href="./empresa.html">Empresa</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="./proyectos.html">Proyectos</a>
+                    <a class="flex-sm-fill text-sm-center nav-link active" href="./cotizacion.html">Cotizacion</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="./contacto.html">Contacto</a>
+            </nav>
+        </div>
+    <h1 class="titulo" >Eliga el producto que mejor funcione para su hogar</h1>
+
+    <div class="container mb-5 mt-5">
+        <div class="row">
+            <!--carta 1-->
+            <div class="col-md-3">
+                <div class="card mt-3">
+                    <div class="product-1 align-items-center p-3 text-center">
+                        <h5>Porton Corredizo</h5>
+                        <img src="../assets/images/Image 9.png" alt="Corredizo" class="rounded-3">
+                        <div class="mt-3 info">
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button class="btn btn-primary" type="button">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <img class="formato_lista" src="../assets/images/Image 10.png" alt="levador">
-                <div class="formato_boton"><label for="Porton Levador">Porton elevador</label>
-                    <input type="checkbox" value="elevador">
+        <!--carta 2-->
+            <div class="col-md-3">
+                <div class="card mt-3">
+                    <div class="product-1 align-items-center p-3 text-center">
+                        <h5>Porton Levadizo</h5>
+                        <img src="../assets/images/Image 10.png" alt="Levatdizo" class="rounded-3">
+                        <div class="mt-4 info">
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button class="btn btn-primary" type="button">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        </section>
-        <section>
-            <img  class="formato_lista"src="../assets/images/Image 11.png" alt="pivot">
-                <div class="formato_boton"><label for="Porton pivot">Porton pivot</label>
-                    <input type="checkbox" value="pivot">
+            </div>
+        <!--carta 3-->
+        <div class="col-md-3">
+            <div class="card mt-3">
+                <div class="product-1 align-items-center p-2 text-center">
+                    <h5>Porton Pivot</h5>
+                    <img src="../assets/images/Image 11.png" alt="Pivot" class="rounded-3">
+                    <div class="mt-3 info">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="button">Comprar</button>
+                        </div>
+                    </div>
                 </div>
-            </section> 
-        <section>
-            <img class="formato_lista"src="../assets/images/Image 13.png"" alt="Doble pivot">
-                <div class="formato_boton">
-                    <label for="Porton Doble pivot">Porton Doble pivot</label>
-                    <input type="checkbox" value="Doble Pivot">
-                </div>
-        </section>
-    </div>
-    </form>
-        <div class="posicion_botones" >
-            <input  class="botones" type="submit" value="Enviar">
-            <input  class="botones" type="reset" name="Borrar">
+            </div>
         </div>
+    <!--carta 4-->
+    <div class="col-md-3">
+        <div class="card mt-3">
+            <div class="product-1 align-items-center p-2 text-center">
+                <h5>Porton Doble Pivot</h5>
+                <img src="../assets/images/Image 13.png" alt="Doble Pivot" class="rounded-3">
+                <div class="mt-3 info">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-primary" type="button">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--carta 5-->
+        </div>
+    </div>
+
         <footer>
             <p>Todos los Trabajos presentados son de nuestra autoria.</p>
         </footer>
+        <script src="../libs/bootstrap/js/bootstrap.min.js"> </script>
 </body>
 </html>

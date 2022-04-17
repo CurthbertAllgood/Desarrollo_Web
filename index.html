@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/mobile.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/72a0e590b2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
@@ -13,22 +12,48 @@
 </head>
 <body>
 
-    <nav id="menu">
-        <li>
-            <i class="logo" class="fa-solid fa-screwdriver-wrench"></i>
-        </li>
-        <li class="flex_box"><a class="color" href="index.html">Home</a></li>
-        <li class="flex_box"><a class="color" href="./pages/empresa.html">Empresa</a></li>
-        <li class="flex_box"><a class="color" href="./pages/proyectos.html">Proyectos</a></li>
-        <li class="flex_box"><a class="color" href="./pages/cotizacion.html">Cotizacion</a></li>
-        <li class="flex_box"><a class="color" href="./pages/contacto.html">Contacto</a></li>
+<div id="menu">
+    <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="./pages/empresa.html">Empresa</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="./pages/proyectos.html">Proyectos</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="./pages/cotizacion.html">Cotizacion</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="./pages/contacto.html">Contacto</a>
     </nav>
+</div>
     <h1 class="animate_bouncein">Herreria Kamacar</h1>
-    <div >
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/images/Herreria_inicio.jpg" class="Bordes_Redondeados" class="d-block w-100" alt="Imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/imagen_inicial2.jpg" class="Bordes_Redondeados" class="d-block w-100"  alt="Imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/imagen_central3.jpg" class="Bordes_Redondeados" class="d-block w-100" alt="Imagen 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!--<div >
         <div>
             <img class="Bordes_Redondeados" src="./assets/images/Herreria_inicio.jpg" alt="Pantalla_inicio"/>
         </div>
     </div>
+-->
         <section class="row">
             <div class="columna1 col">
             <ul>
