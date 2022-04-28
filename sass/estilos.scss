@@ -1,9 +1,49 @@
+@import "media";
+
+@mixin detalles-bordes($border-radius,$border-color,$border-style){
+    $border-radius:$border-radius;
+    $border-color:$border-color;
+    $border-style:$border-style;
+};
+
+$redes: ( /*Declaramos nuestro mapa*/
+        separador-top:  2rem,
+        separador-bottom: 5rem,
+        fuente: 1.5rem,
+); 
+
+
 body{
     background-image: linear-gradient( 178.6deg,  rgba(124,143,161,1) 11.8%, rgba(20,36,50,1) 83.8% );
     width: 1920;
     height: 762;
-    
+
+
+.social {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     }
+h1 {
+    text-align: center  ;
+    color:aliceblue;
+    margin-top:map-get($redes, separador-top );
+    margin-bottom:map-get($redes, separador-bottom );
+
+}
+.parrafo{
+    font-size: map-get($redes, fuente );
+}
+h2 {
+    text-align: center  ;
+    color:aliceblue;
+    margin-bottom:map-get($redes, separador-bottom);
+}
+p{
+    text-align: center ;
+    color:aliceblue;
+    margin-bottom:map-get($redes, separador-bottom);
+}
+
 #menu{
     background: rgb(232,224,227);
     background: radial-gradient(circle, rgba(232,224,227,1) 0%, rgba(163,164,175,1) 100%);
@@ -17,16 +57,24 @@ body{
 .animate_bouncein{
     animation-name: bounceIn;
     animation-duration: 3s;
-    text-align: center  ;
-    color:aliceblue;
-    }
+}
+
 
 .centrar_imagen{
+
     display: flex;
     flex-wrap: wrap;
-    row-gap: 10px;
-    column-gap: 10px;    
-    }
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+
+
+.formato_imagen{
+    @include detalles-bordes(20px, black, solid);
+    width: 400px;
+    height:300px;
+}
+}
 
 .comentarios{
     margin: 20px 0;
@@ -54,60 +102,30 @@ body{
     width: 64px;
     height: 64px;
     }
-.form_comentarios .btn:hover{
+.form_comentarios{
+    .btn:hover{
     box-shadow: 0px 0px 9px rgba(0,0,0,.35);
     }
-
-//Inicio .media
-.media{
-    border-top: 1px solid #bdbfbf;
-    padding-top: 20px;
-    img{
-        margin-right: 20px;
-        }
-
-    .nombre{
-        color:#4b65d1;
-        margin-bottom: 0;
-        }
-
-    .nombre span{
-        font-size: 12px;
-        color: #464646;
-        margin-left: 10px;
-        } 
-    .comentario{
-        margin-top: 10px;
-        color:aliceblue;
-        justify-content: left;
-        }
-
-    .botones{
-        margin-bottom: 10px;
-            a{
-                color: #acacac;
-                font-size: 14px;
-                margin-left: 20px;
-            }
-        }
     }
-//Fin-.media
+ul{
+    color:aliceblue;
+    text-align: center;
+    li{
+        list-style: none;
+        }    
+    }
+
+
 
 .Bordes_Redondeados{
-    border-radius: 50px;
+    @include detalles-bordes(50px, black, ridge);
     display: flex;
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(10,1fr);
-    text-align: center;
-    justify-content: right;
-    animation-name: fadeIn;
-    animation-duration: 3s;    
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-style: ridge;
-    border-color: black;
-    width: 1000px;
+    width: 800px;
     height: 500px;
     }
 
@@ -123,15 +141,14 @@ body{
     margin:auto;
     justify-content: center;
     }
-h1{
-    color:aliceblue;
-    text-align: center;
-    }
+
 
 footer{
     color:aliceblue;
     text-align: center;
-    background-image: linear-gradient( 110.3deg,  rgba(73,93,109,1) 4.3%, rgba(49,55,82,1) 96.7% );
+    background-image: linear-gradient( 110.3deg,  rgba(73,93,109,1) 4.3%, rgba(49,55,82,1) 96.7% ); 
+    margin-top: map-get($redes, separador-top );
+    font-size: none;
     }
 
 #grilla{
@@ -160,10 +177,6 @@ footer{
     justify-content: left;        
     }
 
-li{
-    list-style: none;
-    }    
-
 #cotizacion_grilla{
     display: flex;
     flex-wrap: wrap;
@@ -171,17 +184,13 @@ li{
     column-gap: 20px;
     }
 
-.formato_imagen{ 
-    width: 400;
-    height: 300px;
-    }
+
 .formato_boton{
+    @include detalles-bordes(20px, none, solid);
     background-color: aliceblue;
-    border-radius: 20px;
     width: 150px;
     height: 20px;
     text-align: center;
-    border-style: solid;
     }
 .formato_lista{
     width: 200px;
@@ -195,20 +204,18 @@ li{
     height: 300px;
     }       
 
-.container{
-    margin-top: 110px !important;
-    }
 .card{
     border: none;
     outline: none;
     border-radius: 20px;
     transition: transform .3s;
+    .card:hover{
+        transform: translateY(-15px);
+        transition: transform .3s;
+        }
     }
 
-.card:hover{
-    transform: translateY(-15px);
-    transition: transform .3s;
-    }
+
 
 .posicion_botones{
     border-radius: 20px;
@@ -228,10 +235,6 @@ li{
     column-gap: 20px;
     row-gap: 20px;
 }
-.botones{
-    border-radius: 20px;
-    border-color: black;
-}
 
 
 @keyframes rotar_logo {
@@ -247,6 +250,7 @@ li{
     }
 
 @media screen and (max-width:600px){
+
 
 
 .titulo{
@@ -286,19 +290,6 @@ li{
     position: center;
     }
 
-.columna1{
-    grid-column: 1/3;
-    display: none;
-    }
 
-.texto{
-    grid-column:3/3;
-    position: relative  ;
-    }
-
-.columna2{
-    grid-column: 2/3;
-    display: none;
-    }
-
+}
 }

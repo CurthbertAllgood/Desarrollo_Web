@@ -1,39 +1,95 @@
 @charset "UTF-8";
+.media {
+  border-top: 1px solid #bdbfbf;
+  padding-top: 20px;
+}
+.media img {
+  margin-right: 20px;
+}
+.media .nombre {
+  color: red;
+  margin-bottom: 0;
+  margin-right: 200px;
+  display: row;
+}
+.media .nombre span {
+  font-size: 12px;
+  color: aliceblue;
+  margin-left: 10px;
+}
+.media .comentario {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: aliceblue;
+}
+.media .botones {
+  border-radius: 20px;
+  border-color: black;
+  margin-bottom: 10px;
+}
+.media .botones a {
+  color: #acacac;
+  font-size: 14px;
+  margin-left: 20px;
+}
+
 body {
   background-image: linear-gradient(178.6deg, rgb(124, 143, 161) 11.8%, rgb(20, 36, 50) 83.8%);
   width: 1920;
   height: 762;
 }
-
-#menu {
+body .social {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+body h1 {
+  text-align: center;
+  color: aliceblue;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+body .parrafo {
+  font-size: 1.5rem;
+}
+body h2 {
+  text-align: center;
+  color: aliceblue;
+  margin-bottom: 5rem;
+}
+body p {
+  text-align: center;
+  color: aliceblue;
+  margin-bottom: 5rem;
+}
+body #menu {
   background: rgb(232, 224, 227);
   background: radial-gradient(circle, rgb(232, 224, 227) 0%, rgb(163, 164, 175) 100%);
 }
-#menu .logo {
+body #menu .logo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-
-.animate_bouncein {
+body .animate_bouncein {
   animation-name: bounceIn;
   animation-duration: 3s;
-  text-align: center;
-  color: aliceblue;
 }
-
-.centrar_imagen {
+body .centrar_imagen {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 10px;
-  column-gap: 10px;
+  justify-content: center;
+  row-gap: 20px;
+  column-gap: 20px;
 }
-
-.comentarios {
+body .centrar_imagen .formato_imagen {
+  width: 400px;
+  height: 300px;
+}
+body .comentarios {
   margin: 20px 0;
 }
-
-.form_comentarios textarea {
+body .form_comentarios textarea {
   width: 100%;
   height: 84px;
   max-width: 100%;
@@ -45,177 +101,111 @@ body {
   border: 1px solid #4b65d1;
   margin-bottom: 20px;
 }
-
-.form_comentarios .btn {
+body .form_comentarios .btn {
   background: #4b65d1;
   font-family: "Roboto", sans-serif;
   border-radius: 0;
   color: #fff;
   margin-bottom: 20px;
 }
-
-.perfil {
+body .perfil {
   width: 64px;
   height: 64px;
 }
-
-.form_comentarios .btn:hover {
+body .form_comentarios .btn:hover {
   box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.35);
 }
-
-.media {
-  border-top: 1px solid #bdbfbf;
-  padding-top: 20px;
-}
-.media img {
-  margin-right: 20px;
-}
-.media .nombre {
-  color: #4b65d1;
-  margin-bottom: 0;
-}
-.media .nombre span {
-  font-size: 12px;
-  color: #464646;
-  margin-left: 10px;
-}
-.media .comentario {
-  margin-top: 10px;
+body ul {
   color: aliceblue;
-  justify-content: left;
+  text-align: center;
 }
-.media .botones {
-  margin-bottom: 10px;
+body ul li {
+  list-style: none;
 }
-.media .botones a {
-  color: #acacac;
-  font-size: 14px;
-  margin-left: 20px;
-}
-
-.Bordes_Redondeados {
-  border-radius: 50px;
+body .Bordes_Redondeados {
   display: flex;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  text-align: center;
-  justify-content: right;
-  animation-name: fadeIn;
-  animation-duration: 3s;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-style: ridge;
-  border-color: black;
-  width: 1000px;
+  width: 800px;
   height: 500px;
 }
-
-.flex_box {
+body .flex_box {
   width: 100px;
   height: 20px;
   margin: auto;
   justify-content: center;
   transform: translate(-40px);
 }
-
-.flex_imagenes {
+body .flex_imagenes {
   margin: auto;
   justify-content: center;
 }
-
-h1 {
-  color: aliceblue;
-  text-align: center;
-}
-
-footer {
+body footer {
   color: aliceblue;
   text-align: center;
   background-image: linear-gradient(110.3deg, rgb(73, 93, 109) 4.3%, rgb(49, 55, 82) 96.7%);
+  margin-top: 2rem;
+  font-size: none;
 }
-
-#grilla {
+body #grilla {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "columna1" "texto" "columna2";
 }
-
-.columna1 {
+body .columna1 {
   list-style: none;
   color: aliceblue;
   list-style: none;
   text-align: center;
 }
-
-.texto {
+body .texto {
   list-style: none;
   color: aliceblue;
   list-style: none;
 }
-
-.columna2 {
+body .columna2 {
   list-style: none;
   color: aliceblue;
   text-align: center;
   justify-content: left;
 }
-
-li {
-  list-style: none;
-}
-
-#cotizacion_grilla {
+body #cotizacion_grilla {
   display: flex;
   flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 20px;
 }
-
-.formato_imagen {
-  width: 400;
-  height: 300px;
-}
-
-.formato_boton {
+body .formato_boton {
   background-color: aliceblue;
-  border-radius: 20px;
   width: 150px;
   height: 20px;
   text-align: center;
-  border-style: solid;
 }
-
-.formato_lista {
+body .formato_lista {
   width: 200px;
   height: 300px;
 }
-
-.formato_lista_ {
+body .formato_lista_ {
   border: 20px;
   border-color: beige;
   border-radius: 20px;
   width: 200px;
   height: 300px;
 }
-
-.container {
-  margin-top: 110px !important;
-}
-
-.card {
+body .card {
   border: none;
   outline: none;
   border-radius: 20px;
   transition: transform 0.3s;
 }
-
-.card:hover {
+body .card .card:hover {
   transform: translateY(-15px);
   transition: transform 0.3s;
 }
-
-.posicion_botones {
+body .posicion_botones {
   border-radius: 20px;
   flex-wrap: wrap;
   column-gap: 20px;
@@ -223,23 +213,15 @@ li {
   display: flex;
   justify-content: center;
 }
-
-.dia {
+body .dia {
   font-style: normal;
 }
-
-.formulario {
+body .formulario {
   display: flex;
   flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 20px;
 }
-
-.botones {
-  border-radius: 20px;
-  border-color: black;
-}
-
 @keyframes rotar_logo {
   0% {
     transform: rotateY(0deg);
@@ -252,15 +234,13 @@ li {
   }
 }
 @media screen and (max-width: 600px) {
-  .titulo {
+  body .titulo {
     text-align: center;
   }
-
-  .logo {
+  body .logo {
     display: none;
   }
-
-  .Bordes_Redondeados {
+  body .Bordes_Redondeados {
     border-radius: 50px;
     display: flex;
     grid-template-columns: repeat(10, 1fr);
@@ -276,34 +256,16 @@ li {
     border-color: black;
     width: 100%;
   }
-
-  .mobile_tamaño {
+  body .mobile_tamaño {
     text-align: center;
   }
-
-  .animate_bouncein {
+  body .animate_bouncein {
     position: relative;
   }
-
-  #grilla {
+  body #grilla {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: center;
-  }
-
-  .columna1 {
-    grid-column: 1/3;
-    display: none;
-  }
-
-  .texto {
-    grid-column: 3/3;
-    position: relative;
-  }
-
-  .columna2 {
-    grid-column: 2/3;
-    display: none;
   }
 }
 
