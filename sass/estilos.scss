@@ -6,6 +6,7 @@
     $border-style:$border-style;
 };
 
+
 $redes: ( /*Declaramos nuestro mapa*/
         separador-top:  2rem,
         separador-bottom: 5rem,
@@ -70,6 +71,7 @@ p{
 
 
 .formato_imagen{
+    @extend .centrar_imagen;
     @include detalles-bordes(20px, black, solid);
     width: 400px;
     height:300px;
@@ -253,13 +255,18 @@ footer{
 
 
 
+.display-media{
+    display:none;
+}
+
+
 .titulo{
     text-align: center;
     }
 
 .logo{
     display: none;
-    }
+}
 .Bordes_Redondeados{
     border-radius: 50px;
     display: flex;
@@ -284,12 +291,5 @@ footer{
 .animate_bouncein{
     position:relative;
     }
-#grilla{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    position: center;
-    }
-
-
 }
 }

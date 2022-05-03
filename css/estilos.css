@@ -75,7 +75,7 @@ body .animate_bouncein {
   animation-name: bounceIn;
   animation-duration: 3s;
 }
-body .centrar_imagen {
+body .centrar_imagen, body .centrar_imagen .formato_imagen {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -234,6 +234,9 @@ body .formulario {
   }
 }
 @media screen and (max-width: 600px) {
+  body .display-media {
+    display: none;
+  }
   body .titulo {
     text-align: center;
   }
@@ -261,11 +264,6 @@ body .formulario {
   }
   body .animate_bouncein {
     position: relative;
-  }
-  body #grilla {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    position: center;
   }
 }
 
