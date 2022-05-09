@@ -34,6 +34,10 @@
   margin-left: 20px;
 }
 
+.carousel_mobile {
+  display: none;
+}
+
 body {
   background-image: linear-gradient(178.6deg, rgb(124, 143, 161) 11.8%, rgb(20, 36, 50) 83.8%);
   width: 1920;
@@ -234,6 +238,17 @@ body .formulario {
   }
 }
 @media screen and (max-width: 600px) {
+  body .display_desktop {
+    display: none;
+  }
+  body .carousel_mobile {
+    display: flex;
+    justify-content: center;
+  }
+  body .carousel_mobile .formato_imagen {
+    width: 400px;
+    height: 300px;
+  }
   body .display-media {
     display: none;
   }
